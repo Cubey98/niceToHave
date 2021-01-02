@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar class="black">
+    <ion-title>Einkaufsliste</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="black" padding>
+  
+    <!-- Sliding item with icon start options on end side -->
+    <ion-item-sliding *ngFor="let product of products">
+      <ion-item class="midnightBlue">
+        <ion-checkbox color="light" id="itemCheckbox" (click)="itemFinished(product)"></ion-checkbox>
+        <ion-label style="margin-left: 10px;">
+          {{product}}
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="start">
+        <ion-item-option class="blue" (click)="editItem(product)">
+          <ion-icon slot="start" ios="pencil-outline" md="pencil-outline"></ion-icon>
+          Edit
+        </ion-item-option>
+      </ion-item-options>
+      <ion-item-options>
+        <ion-item-option color="danger" (click)="deleteItem(product)">
+          <ion-icon slot="start" ios="trash" md="trash"></ion-icon>
+          Delete
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <!-- todo add button -->
+  <ion-fab vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="addItem()">
+      <ion-icon class="blue" name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

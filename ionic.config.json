@@ -1,0 +1,8 @@
+{
+  "name": "niceToHave",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="black">
+    <ion-title>
+      Dashboard
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="black">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Dashboard</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    
+    <ion-grid>
+      <ion-row>
+
+        <!-- TODO: if you have more then six cards you can't see the first card views -->
+
+        <!-- todo list card -->
+        <ion-col size="6">
+          <ion-card class="cardView" routerLink="/todo/">
+            <ion-icon size="large" name="list-outline"></ion-icon>
+            <h3>ToDo Liste</h3>
+          </ion-card>
+        </ion-col>
+
+
+        <!-- shopping list card  -->
+        <ion-col size="6">
+          <ion-card class="cardView" routerLink="/shopping/">
+            <ion-icon size="large" name="cart-outline"></ion-icon>
+            <h3>Einkaufsliste</h3>
+          </ion-card>
+        </ion-col>
+
+        
+
+
+      </ion-row>
+    </ion-grid>
+    
+
+    
+    
+    
+
+  </div>
+</ion-content>
